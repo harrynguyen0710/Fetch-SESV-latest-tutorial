@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- specify the character encoding utf-8 for webpage (ensure non-English letters is displayed correctly)  -->
+  <meta charset="UTF-8">
+  <!-- ensure the layout is responsive in different devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- set title of the web browser tab when webpage is open -->
     <title>Sesv Tutorials</title>
+
+    <!-- add style css for the layout  -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- The main layout -->
     <div class="container">
+        <!-- a h1 heading for the layout -->
         <h1>Welcome to Sesv Tutorials</h1>
+        <!-- a paragraph to introduce the button  -->
         <p>Explore the latest lessons by clicking the button below!</p>
 
         <!-- The button for fetching the latest lessons from API -->
@@ -19,6 +27,8 @@
         <div id="data-container"></div>
     </div>
 
+    <!-- add Javascript logic for fetching data -->
     <script src="script.js"></script>
+    
 </body>
 </html>
