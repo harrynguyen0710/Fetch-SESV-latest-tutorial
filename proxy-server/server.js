@@ -24,8 +24,10 @@ app.get('/proxy', async (req, res) => {
   try {
     // fetch data from the api url
     const response = await fetch(apiUrl);
+
     // convert response to be Json object
     const data = await response.json();
+    
     // return the json result
     res.json(data);
   } catch (error) {

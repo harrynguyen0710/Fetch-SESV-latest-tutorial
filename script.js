@@ -22,6 +22,7 @@ const fetchLessons = () => {
   fetch(url)
     // convert data to JSON to work with Javascript methods
     .then(response => response.json())
+
     // execute the next method for displaying data to the interface
     .then(info => {
       // get the container element where the data will be displayed.
@@ -29,18 +30,24 @@ const fetchLessons = () => {
 
       // access the 'edges' array within 'result' from json data.
       const posts = info.result.data.posts;
+
       // iterate through the array and create a new HTML element for displaying post's details
       posts.edges.forEach(item => {
-        const title = item.node.frontmatter.title; // access the title object
+        // access the title object
+        const title = item.node.frontmatter.title; 
+
         // create a new div element for displaying the post's title, excerpt
         const itemDiv = document.createElement('div');
+
         // add classname for the created div
         itemDiv.className = 'data-item';
+
         // populate content of the div with post's title and excerpt
         itemDiv.innerHTML = `
             <h3>${title}</h3>
             <p>${item.node.excerpt}</p>
         `;
+        
         // append the new div element to the layout container in the DOM
         container.appendChild(itemDiv);
       });
